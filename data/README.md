@@ -2,10 +2,7 @@
 
 ## Confidentiality-limited reference release
 
-This release contains five anonymized case records in total. `C-010` is the
-case used for the manuscript's Mr. Zhang analysis; its complete released
-source fields and its designer-confirmed reference rule are retained. The
-other four records are representative raw-data examples.
+This release contains five anonymized case records in total. `C-010` is the anonymized case used for the manuscript's Mr. Zhang analysis, with its complete released source fields and corresponding reference rule retained. Four additional anonymized cases and their corresponding reference-rule records are provided as representative reference examples. The released rules are reference data rather than model-generated outputs.
 
 No model-generated rule, intermediate agent output, evaluation result, or
 experiment log is included.
@@ -13,8 +10,7 @@ experiment log is included.
 ## Source tables
 
 - `cases/reference_cases.csv` contains the five anonymized raw case records.
-- `rules/reference_rules.csv` contains the corresponding raw reference-rule
-  records.
+- `rules/reference_rules.csv` contains the five reference-rule records corresponding to the five released cases.
 
 The case fields cover rehabilitation stage, record source, wearing feedback,
 current EBOM status, confirmed EBOM difference, rationale, constraints, and
