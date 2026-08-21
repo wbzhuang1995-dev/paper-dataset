@@ -16,8 +16,7 @@ complete private dataset.
 ## Included materials
 
 - `data/cases/reference_cases.csv`: five anonymized raw case records;
-- `data/rules/reference_rules.csv`: the corresponding raw reference-rule
-  records, including the designer-confirmed rule associated with `C-010`;
+- `data/rules/reference_rules.csv`: five anonymized reference-rule records corresponding to the five released cases;
 - `data/README.md`: data scope and confidentiality note;
 - `prompts/`: the shared prompt and prompts for EAA, PAA, CIA, CRA, and RGA;
 - `schemas/`: agent-specific output schemas, shared fields, and the unified
