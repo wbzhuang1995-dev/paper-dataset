@@ -35,10 +35,7 @@ complete private dataset.
 
 ## Not included
 
-The repository intentionally does not include the full private case
-collection, patient-level split manifests, DMKG exports, model-provider API
-credentials, model-generated candidate rules, post-adjustment experiment
-outputs, expert scoring files, or quantitative evaluation results.
+To protect participant privacy and comply with data confidentiality and security requirements, the public repository contains only the materials that can be appropriately shared. Accordingly, the full case collection, patient-level split manifests, DMKG exports, model-provider API credentials, model-generated candidate rules, post-adjustment experiment outputs, expert scoring files, and detailed quantitative evaluation records are not publicly released.
 
 ## Reproducibility note
 
