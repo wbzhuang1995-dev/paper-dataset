@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conflict Identification Agent output",
+  "type": "object",
+  "required": ["agent", "c_k_operator", "stage_status", "task_output", "missing_information", "return_to", "next_agent"],
+  "properties": {
+    "agent": {"const": "CIA"},
+    "c_k_operator": {"const": "K-K"},
+    "stage_status": {"enum": ["READY", "NEEDS_REVISION"]},
+    "task_output": {"type": "object", "required": ["conflicts"], "properties": {"conflicts": {"type": "array", "items": {"type": "object", "required": ["conflict_id", "status", "type", "involved_requirements", "involved_causes", "description", "risk", "severity", "supporting_evidence"], "properties": {"conflict_id": {"type": "string"}, "status": {"enum": ["CONFIRMED", "POTENTIAL"]}, "type": {"enum": ["target", "structural", "parameter", "boundary", "validation"]}, "involved_requirements": {"type": "array"}, "involved_causes": {"type": "array"}, "involved_modules_or_parts": {"type": "array"}, "involved_parameters": {"type": "array"}, "description": {"type": "string"}, "risk": {"type": "string"}, "severity": {"type": "string"}, "supporting_evidence": {"type": "array"}}}}}},
+    "missing_information": {"type": "array"},
+    "return_to": {"enum": ["PAA", "CIA", "DESIGNER", "NONE"]},
+    "next_agent": {"enum": ["CRA", "NONE"]}
+  }
+}

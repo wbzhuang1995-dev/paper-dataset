@@ -1,0 +1,9 @@
+{
+  "agent": "<EAA | PAA | CIA | CRA | RGA>",
+  "c_k_operator": "<C-C | C-K | K-K | K-C | K-C/K-K>",
+  "stage_status": "<READY | NEEDS_REVISION>",
+  "task_output": {},
+  "missing_information": [],
+  "return_to": "<USER_OR_DESIGNER | DESIGNER | EAA | PAA | CIA | CRA | RGA | NONE>",
+  "next_agent": "<PAA | CIA | CRA | RGA | DESIGNER | LTM | NONE>"
+}

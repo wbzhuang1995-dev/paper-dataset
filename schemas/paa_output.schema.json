@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Problem Analysis Agent output",
+  "type": "object",
+  "required": ["agent", "c_k_operator", "stage_status", "task_output", "missing_information", "return_to", "next_agent"],
+  "properties": {
+    "agent": {"const": "PAA"},
+    "c_k_operator": {"const": "C-K"},
+    "stage_status": {"enum": ["READY", "NEEDS_REVISION"]},
+    "task_output": {"type": "object", "required": ["cause_evidence"], "properties": {"cause_evidence": {"type": "array", "items": {"type": "object", "required": ["requirement_id", "cause_id", "possible_cause", "supporting_evidence", "evidence_status", "confidence", "need_confirmation"], "properties": {"requirement_id": {"type": "string"}, "cause_id": {"type": "string"}, "possible_cause": {"type": "string"}, "related_module_or_part": {"type": "string"}, "related_parameter": {"type": "string"}, "current_value": {"type": "string"}, "supporting_evidence": {"type": "array"}, "constraints": {"type": "array"}, "evidence_status": {"enum": ["SUPPORTED", "PARTIALLY_SUPPORTED", "UNSUPPORTED"]}, "confidence": {"type": "string"}, "need_confirmation": {"type": "boolean"}}}}}},
+    "missing_information": {"type": "array"},
+    "return_to": {"enum": ["EAA", "PAA", "DESIGNER", "NONE"]},
+    "next_agent": {"enum": ["CIA", "NONE"]}
+  }
+}

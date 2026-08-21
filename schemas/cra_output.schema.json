@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conflict Resolution Agent output",
+  "type": "object",
+  "required": ["agent", "c_k_operator", "stage_status", "task_output", "missing_information", "return_to", "next_agent"],
+  "properties": {
+    "agent": {"const": "CRA"},
+    "c_k_operator": {"const": "K-C/K-K"},
+    "stage_status": {"enum": ["READY", "NEEDS_REVISION"]},
+    "task_output": {"type": "object", "required": ["candidate_actions", "unresolved_conflicts"], "properties": {"candidate_actions": {"type": "array", "items": {"type": "object", "required": ["action_id", "linked_conflict_id", "supporting_evidence", "target_module_or_part", "target_parameter", "recommended_adjustment", "expected_effect", "potential_risk", "exception_boundary", "validation_items", "feasibility"], "properties": {"action_id": {"type": "string"}, "linked_conflict_id": {"type": "string"}, "supporting_evidence": {"type": "array"}, "target_module_or_part": {"type": "string"}, "target_parameter": {"type": "string"}, "current_value": {"type": "string"}, "recommended_adjustment": {"type": "string"}, "recommended_range": {"type": "string"}, "parameter_source": {"type": "string"}, "expected_effect": {"type": "string"}, "potential_risk": {"type": "string"}, "exception_boundary": {"type": "string"}, "validation_items": {"type": "array"}, "feasibility": {"type": "string"}}}}, "unresolved_conflicts": {"type": "array"}}},
+    "missing_information": {"type": "array"},
+    "return_to": {"enum": ["CIA", "CRA", "DESIGNER", "NONE"]},
+    "next_agent": {"enum": ["RGA", "NONE"]}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rule Generation Agent output",
+  "type": "object",
+  "required": ["agent", "c_k_operator", "stage_status", "task_output", "missing_information", "return_to", "next_agent"],
+  "properties": {
+    "agent": {"const": "RGA"},
+    "c_k_operator": {"const": "K-C/K-K"},
+    "stage_status": {"enum": ["READY", "NEEDS_REVISION"]},
+    "task_output": {"type": "object", "required": ["rule_status", "source_mapping", "candidate_EBOM", "expected_EBOM_patch", "decision_card", "candidate_rule"], "properties": {"rule_status": {"enum": ["CANDIDATE", "REVISION_REQUIRED", "FINAL"]}, "source_mapping": {"type": "object", "required": ["requirement_ids", "evidence_ids", "conflict_ids", "action_ids"]}, "candidate_EBOM": {"type": "object"}, "expected_EBOM_patch": {"type": "array"}, "decision_card": {"type": "object"}, "candidate_rule": {"type": "object", "required": ["If", "Then", "Unless", "Verify", "Confidence", "Applicable_scope", "Uncertainty"], "properties": {"If": {"type": "string"}, "Then": {"type": "string"}, "Unless": {"type": "string"}, "Verify": {"type": "string"}, "Confidence": {"type": "string"}, "Applicable_scope": {"type": "string"}, "Uncertainty": {"type": "string"}}}}},
+    "missing_information": {"type": "array"},
+    "return_to": {"enum": ["PAA", "CIA", "CRA", "RGA", "DESIGNER", "NONE"]},
+    "next_agent": {"enum": ["DESIGNER", "RGA", "LTM", "NONE"]}
+  }
+}

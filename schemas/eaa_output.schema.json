@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Analysis Agent output",
+  "type": "object",
+  "required": ["agent", "c_k_operator", "stage_status", "task_output", "missing_information", "return_to", "next_agent"],
+  "properties": {
+    "agent": {"const": "EAA"},
+    "c_k_operator": {"const": "C-C"},
+    "stage_status": {"enum": ["READY", "NEEDS_REVISION"]},
+    "task_output": {
+      "type": "object",
+      "required": ["requirements"],
+      "properties": {
+        "requirements": {"type": "array", "items": {"type": "object", "required": ["requirement_id", "original_feedback", "problem_location", "wearing_scenario", "problem_type", "configuration_goal", "priority", "uncertainty", "need_confirmation"], "properties": {"requirement_id": {"type": "string"}, "original_feedback": {"type": "string"}, "problem_location": {"type": "string"}, "wearing_scenario": {"type": "string"}, "problem_type": {"type": "string"}, "configuration_goal": {"type": "string"}, "priority": {"type": "string"}, "uncertainty": {"type": "string"}, "need_confirmation": {"type": "boolean"}}}}
+      }
+    },
+    "missing_information": {"type": "array", "items": {"type": "string"}},
+    "return_to": {"enum": ["USER_OR_DESIGNER", "EAA", "NONE"]},
+    "next_agent": {"enum": ["PAA", "NONE"]}
+  }
+}
