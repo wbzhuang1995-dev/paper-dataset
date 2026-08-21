@@ -19,10 +19,10 @@ complete private dataset.
 
 ## Included materials
 
-- `数据集/案例集/reference_cases.csv`: five anonymized raw case records;
-- `数据集/规则集/reference_rules.csv`: the corresponding raw reference-rule
+- `data/cases/reference_cases.csv`: five anonymized raw case records;
+- `data/rules/reference_rules.csv`: the corresponding raw reference-rule
   records, including the designer-confirmed rule associated with `C-010`;
-- `数据集/README.md`: data scope and confidentiality note;
+- `data/README.md`: data scope and confidentiality note;
 - `prompts/`: the shared prompt and prompts for EAA, PAA, CIA, CRA, and RGA;
 - `schemas/`: agent-specific output schemas, shared fields, and the unified
   output template;
